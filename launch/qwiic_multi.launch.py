@@ -12,8 +12,9 @@ def generate_launch_description():
             name='ros_qwiic_tof',
             output='screen',
             parameters=[
-                {'frame_ids': ['depth1', 'depth2', 'depth3'] },
+                {'frame_ids': ['left_depth_link', 'front_depth_link', 'right_depth_link'] },
+                {'frame_id': 'depth_link'},
                 {'multiplexer_address':  112 },
-                {'multiplexer_ports': [1, 8, 7] },
+                {'multiplexer_ports': [1, 0, 7] },
             ]),
     ])
